@@ -30,7 +30,8 @@ class TopicsController < ApplicationController
     :archive_message,
     :move_to_inbox,
     :convert_topic,
-    :bookmark
+    :bookmark,
+    :publish
   ]
 
   before_action :consider_user_for_promotion, only: :show
@@ -129,6 +130,10 @@ class TopicsController < ApplicationController
     end
 
     raise ex
+  end
+
+  def publish
+    raise "WAT"
   end
 
   def unsubscribe
